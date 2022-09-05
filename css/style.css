@@ -60,7 +60,7 @@ button,
     display: flex;
 }
 
-.page-header {
+.header-border {
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -114,9 +114,27 @@ button,
 
 .nav-link {
     color: #212121;
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
 
 .contact-list-link {
+    display: flex;
+    column-gap: 10px;
+
+    align-items: center;
+
     color: var(--background-color);
 }
 
@@ -125,11 +143,6 @@ button,
 .nav-link:focus,
 .contact-list-link:focus {
     color: var(--accent-color);
-}
-
-.contact-list-link {
-    display: flex;
-    column-gap: 10px;
 }
 
 .envelope-list-icon {
@@ -161,6 +174,11 @@ button,
 }
 
 .section-order {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -169,10 +187,6 @@ button,
     color: #FFFFFF;
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/background.jpg');
-}
-
-.section-order > img {
-    object-fit: cover;
 }
 
 .order-text {
@@ -198,7 +212,7 @@ button,
 
     font-family: var(--primary-font);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     text-align: center;
@@ -211,6 +225,13 @@ button,
 
 .order-button:hover {
     background-color: #188CE8;
+}
+
+/* ========= бекдроп ========= */
+
+.backdrop-is-hidden {
+    opacity: 0;
+    cursor: none;
 }
 
 /* ========= блок особливостi ========= */
@@ -265,13 +286,40 @@ button,
     align-items: center;
     justify-content: center;
 
-    padding: 25px 0 25px 0;
+    height: 120px;
     margin-bottom: 30px;
 
     background-color: #F5F4FA;
 }
 
 /* ========= чим займаємося ========= */
+
+.relative-box {
+    position: relative;
+}
+
+.photo-overlay {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 370px;
+    height: 70px;
+    bottom: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #FFFFFF;
+}
+
+.photo-overlay p {    
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
 
 .photo-wraper-box {
     padding-bottom: 94px;
@@ -295,7 +343,6 @@ button,
 }
 
 .team-li {
-    padding-bottom: 30px;
     background-color: #FFFFFF;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -353,6 +400,8 @@ button,
     display: flex;
     justify-content: center;
     column-gap: 10px;
+
+    padding-bottom: 30px;
 }
 
 .social-list-link {
@@ -399,6 +448,9 @@ button,
 
     width: 170px;
     height: 92px;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
 }
 
 .clients-list-icon {
@@ -410,17 +462,11 @@ button,
 .clients-list-link:hover .clients-list-icon,
 .clients-list-link:focus .clients-list-icon {
     fill: var(--accent-color);
-    border: 0;
 }
 
-.clients-list > li {
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-}
-
-.clients-list >li :hover,
-.clients-list >li :focus {
-    border: 1px solid var(--accent-color);
+.clients-list-link:hover,
+.clients-list-link:focus {
+    border-color: var(--accent-color);
 }
 
 /* ========= footer ========= */
@@ -521,7 +567,8 @@ address {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);;
+    background-color: rgba(255, 255, 255, 0.1);
+    ;
 }
 
 .join-us-list-icon {
@@ -561,18 +608,17 @@ address {
     background-color: #F5F4FA;
 
     border-radius: 4px;
-    border: 1px solid #FFFFFF;
+    border-color: transparent;
 }
 
 .filters-button:hover,
 .filters-button:focus {
     color: #FFFFFF;
     background-color: var(--accent-color);
-    
-    border: 1px solid var(--accent-color);
+
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-     0px 1px 2px rgba(0, 0, 0, 0.08), 
-     0px 2px 2px rgba(0, 0, 0, 0.12);
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ======= portfolio work ======= */
@@ -588,9 +634,9 @@ address {
 
 .portfolio-list-link:hover,
 .portfolio-list-link:focus {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-    0px 1px 2px rgba(0, 0, 0, 0.08), 
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-text {
@@ -621,4 +667,4 @@ address {
     letter-spacing: 0.03em;
 
     color: var(--background-color);
-}   
+}

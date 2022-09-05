@@ -28,9 +28,9 @@
                     Web<span class="header-logo-span">Studio</span>
                 </a>
                 <ul class="nav-list list">
-                    <li class="nav-item"><a href="#" class="nav-link link">Студія</a></li>
+                    <li class="nav-item"><a href="./index.html" class="nav-link link">Студія</a></li>
                     <li class="nav-item"><a href="./portfolio.html" class="nav-link link">Портфоліо</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link link">Контакти</a></li>
+                    <li class="nav-item"><a href="#footer" class="nav-link link">Контакти</a></li>
                 </ul>
             </nav>
             <ul class="contact-list list">
@@ -55,12 +55,25 @@
     </header>
 
     <main>
+
         <section class="section section-order">
             <div class="container container-order">
                 <h1 class="order-text">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="order-button">Замовити послугу</button>
+                <button type="button" class="order-button"
+                data-modal-open>Замовити послугу</button>
             </div>
         </section>
+
+            <div class="backdrop-is-hidden" data-modal>
+                <div class="modal">
+                    <p>
+                        lorem ipsum
+                    </p>
+                    <button data-modal-close>close</button>
+                </div>
+            </div>
+
+
         <section class="section features-box">
             <div class="container">
                 <h2 hidden>Особливості</h2>
@@ -114,9 +127,18 @@
             <div class="container">
                 <h2 class="whatwedo-text">Чим ми займаємося</h2>
                 <ul class="list photo-wraper">
-                    <li><img src="./images/main1.jpg" alt="Людина користуеться клавіатурою і планшетом"></li>
-                    <li><img src="./images/main2.jpg" alt="Людина користуеться телефоном і ноутбуком"></li>
-                    <li><img src="./images/main3.jpg" alt="Людина користуеться планшетом і схемою кольорів"></li>
+                    <li class="relative-box">
+                        <h3 class="photo-overlay"><p>Десктопні додатки</p></h3>
+                        <img src="./images/main1.jpg" alt="Людина користуеться комп'ютером та клавіатурою">
+                    </li>
+                    <li class="relative-box">
+                        <h3 class="photo-overlay"><p>Мобільні додатки</p></h3>
+                        <img src="./images/main2.jpg" alt="Людина користуеться телефоном">
+                    </li>
+                    <li class="relative-box">
+                        <h3 class="photo-overlay"><p>Дизайнерські рішення</p></h3>
+                        <img src="./images/main3.jpg" alt="Людина користуеться схемою кольорів на планшетi">
+                    </li>
                 </ul>
             </div>
         </section>
@@ -317,7 +339,7 @@
 
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="container footer-flex">
             <div>
                 <a href="./index.html" class="logo footerlogo link">
@@ -325,16 +347,18 @@
                 </a>
                 <address>
                     <ul class="list footer-list">
-                        <li><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank" rel="noopener noreferrer nofollow"
-                                class="address-street link">м. Київ, пр-т Лесі Українки,
+                        <li><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                                rel="noopener noreferrer nofollow" class="address-street link">м. Київ, пр-т Лесі
+                                Українки,
                                 26</a></li>
-                        <li><a href="mailto:info@devstudio.com" class="address-mail-tel link">info@devstudio.com</a></li>
+                        <li><a href="mailto:info@devstudio.com" class="address-mail-tel link">info@devstudio.com</a>
+                        </li>
                         <li><a href="tel:+380961111111" class="address-mail-tel link">+380961111111</a></li>
                     </ul>
                 </address>
             </div>
             <div>
-                <h3 class="join-us-text">приєднуйтесь</h3>
+                <p class="join-us-text">приєднуйтесь</p>
                 <ul class="list join-us-list">
                     <li class="join-us-list-item">
                         <a href="" class="join-us-list-link">
@@ -368,6 +392,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 
 </body>
 
