@@ -28,9 +28,9 @@
                     Web<span class="header-logo-span">Studio</span>
                 </a>
                 <ul class="nav-list list">
-                    <li class="nav-item"><a href="./index.html" class="nav-link link">Студія</a></li>
-                    <li class="nav-item"><a href="./portfolio.html" class="nav-link link">Портфоліо</a></li>
-                    <li class="nav-item"><a href="#footer" class="nav-link link">Контакти</a></li>
+                    <li><a href="./index.html" class="nav-link link current-page">Студія</a></li>
+                    <li><a href="./portfolio.html" class="nav-link link">Портфоліо</a></li>
+                    <li><a href="#footer" class="nav-link link">Контакти</a></li>
                 </ul>
             </nav>
             <ul class="contact-list list">
@@ -383,12 +383,17 @@
         </div>
     </footer>
 
-            <div class="backdrop-is-hidden" data-modal>
+            <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                    <p>
-                        lorem ipsum
+                    <button data-modal-close class="icon-close-bnt">   
+                        <svg lang="en" class="icon-close">
+                            <use href="./images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <p class="modal-text-container">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Eaque dolores, ipsa nemo ad voluptatum ullam earum. Nostrum animi quis et totam molestias esse sequi quibusdam nam, quae repellendus, maxime dolores!
                     </p>
-                    <button data-modal-close>close</button>
                 </div>
             </div>
 
