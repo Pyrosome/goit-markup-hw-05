@@ -51,16 +51,6 @@ button,
     padding-right: 15px;
 }
 
-button,
-:hover,
-:focus {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* ###====== components ======### */
 
 /* ========= header ========= */
@@ -120,6 +110,7 @@ button,
     padding-bottom: 32px;
     padding-top: 32px;
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link {
@@ -163,12 +154,14 @@ button,
     width: 16px;
     height: 12px;
     fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .smartphone-list-icon {
     width: 10px;
     height: 16px;
     fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list-link:hover .envelope-list-icon,
@@ -416,6 +409,8 @@ button,
     align-items: center;
     justify-content: center;
 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -426,6 +421,8 @@ button,
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -453,6 +450,8 @@ button,
     align-items: center;
     justify-content: center;
 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     width: 170px;
     height: 92px;
 
@@ -464,6 +463,8 @@ button,
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover .clients-list-icon,
@@ -492,6 +493,7 @@ address {
 .address-mail-tel,
 .address-street {
     display: inline-block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list li:nth-child(-n+2) {
@@ -571,6 +573,8 @@ address {
     align-items: center;
     justify-content: center;
 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -616,6 +620,10 @@ address {
 
     border-radius: 4px;
     border-color: transparent;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -637,6 +645,8 @@ address {
 
 .portfolio-list-link {
     display: block;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-link:hover,
@@ -728,6 +738,10 @@ address {
     height: 100%;
 
     background: rgba(0, 0, 0, 0.2);
+    
+    transition: 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
